@@ -4,7 +4,7 @@ function booooo(n) {
   }
 }
 
-booooo([1, 2, 3, 4, 5]);
+booooo([1, 2, 3, 4, 5]); // Space Complexity - O(1)
 
 function arrayOfHiNTimes(n) {
   let hiArray = [];
@@ -14,4 +14,4 @@ function arrayOfHiNTimes(n) {
   return hiArray;
 }
 
-console.log(arrayOfHiNTimes(6));
+console.log(arrayOfHiNTimes(6)); // Space Complexity - O(n)
