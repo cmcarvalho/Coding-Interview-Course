@@ -18,7 +18,8 @@ function commonItems(arr1, arr2) {
   console.log("false");
 }
 
-// O(n^2) solution
+// O(n^2) solution for time complexity
+// O(1) solution for space complexity
 
 commonItems(array1, array2);
 commonItems(array3, array4);
@@ -30,9 +31,29 @@ commonItems(array3, array4);
 // x: true
 // }
 
+// O(a + b) solution for time complexity
+// O(a) solution for space complexity
+
 function containsCommonItem2(arr1, arr2) {
   // loop through first array and create object
   // where properties === items in the array
+
+  let map = {};
+  for (let m = 0; m < arr1.length; m++) {
+    if (!map[arr1[m]]) {
+      const item = arr1[m];
+      map[item] = true;
+      console.log(map);
+    }
+  }
   // loop through second array and check if item
   // in second array exists on created object.
+  for (let n = 0; n < arr1.length; n++) {
+    if (map[arr2[n]]) {
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(containsCommonItem2(array3, array4));
